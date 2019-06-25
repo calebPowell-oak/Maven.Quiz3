@@ -12,7 +12,12 @@ public class ArrayUtility<SomeType> {
         this.array = array;
     }
 
-    public SomeType findOddOccurringValue() {
+    public SomeType findOddOccurringValue(){
+        for(int i = 0; i < array.length; i++){
+            if(i+1 >= array.length || !array[i].equals(array[i+1])){
+                if(i % 2 == 0) return array[i];
+            }
+        }
         return null;
     }
 
